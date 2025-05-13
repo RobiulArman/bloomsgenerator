@@ -2,7 +2,10 @@ from flask import Flask, request, render_template, flash, redirect, url_for, ses
 from objective import ObjectiveTest
 from subjective import SubjectiveTest
 import time
-
+import nltk
+nltk.download('punkt')
+nltk.download('averaged_perceptron_tagger')
+nltk.download('wordnet')
 app = Flask(__name__)
 
 app.secret_key = 'aica2'
